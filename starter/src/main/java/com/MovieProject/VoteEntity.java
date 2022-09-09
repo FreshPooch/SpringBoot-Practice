@@ -5,15 +5,15 @@ import org.hibernate.SessionFactory;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "names")
+@Table(name = "votes")
 public class VoteEntity {
 
  @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private int id;
+    @GeneratedValue
 
- @Column(name = "voter_name")
+    private Integer id;
+
+ @Column(name = "voter_Name")
     private String voterName;
 
 
@@ -21,7 +21,7 @@ public class VoteEntity {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -29,7 +29,7 @@ public class VoteEntity {
         return voterName;
     }
 
-    public void setVoterName(String userName) {
+    public void setVoterName(String voterName) {
         this.voterName = voterName;
     }
 }
